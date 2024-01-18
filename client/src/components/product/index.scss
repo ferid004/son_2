@@ -2,13 +2,19 @@
     max-width: 1000px;
     width: 100%;
     margin: auto;
-display: flex;
-align-items: center;
-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
 
     .probox {
-        width: 100%;
-
+        display: flex;
+        width:45%;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
         .up {
             font-weight: 600;
             font-size: 30px;
@@ -18,8 +24,13 @@ gap: 20px;
             display: flex;
             width: 100%;
             justify-content: space-between;
+padding: 10px;
             .info {
                 opacity: 70%;
+                font-size: 20px;
+            }
+            .price{
+                font-size: 20px;
             }
         }
     }

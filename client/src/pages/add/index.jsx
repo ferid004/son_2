@@ -5,6 +5,9 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 function Add() {
+const [search, setSearch] = useState("")
+const [sort, setSort] = useState("")
+
   const [product, setProduct] = useState([])
   const axiosAllData = async () => {
     const res = await axios.get('http://localhost:3000/')
@@ -68,14 +71,14 @@ function Add() {
 
         </div>
         <div className="inputbox">
-          <input type="text" />
+          <input type="text"  onChange={(e)=>setSearch(e.target.value)}/>
         </div>
         <div className="sortbut">
-          <button>asd</button>
-          <button>asdd</button>
-          <button>asd</button>
-          <button>asd</button>
-          <button>dasd</button>
+          <button onClick={()=>setSort({prop:'name',asc:true})} >A-z</button>
+          <button onClick={()=>setSort({prop:'name',asc:false})}>Z-a</button>
+          <button onClick={()=>setSort(null)}>default</button>
+          <button onClick={()=>setSort({prop:'price',asc:true})}>artan</button>
+          <button onClick={()=>setSort({prop:'price',asc:false})}>azalan</button>
         </div>
         <div className="tap">
           <table border={1}>
@@ -88,12 +91,25 @@ function Add() {
               </tr>
             </thead>
             <tbody>
-              {product && product.map((item) => (
+              {product && product
+              .filter(x=>x.name.toLowerCase().includes(search.toLowerCase()))
+              .sort((a,b) => {
+                if (sort && sort.asc===true) {
+                  return (a[sort.prop] > b[sort.prop]) ? 1 : ((b[sort.prop] > a[sort.prop]) ? -1 : 0)
+                }else if (sort && sort.asc===false) {
+                  return (a[sort.prop] < b[sort.prop]) ? 1 : ((b[sort.prop] < a[sort.prop]) ? -1 : 0)
+                } else{
+                  null
+                }
+              }
+              
+              )
+              .map((item) => (
                 <tr key={item._id}>
                   <td>{item.name}</td>
                   <td>{item.info}</td>
                   <td>$ {item.price}.00</td>
-                  <td onClick={() => deledata(item._id)}>delete</td>
+                  <td className='del' onClick={() => deledata(item._id)}>delete</td>
                 </tr>
               ))}
             </tbody>

@@ -14,19 +14,17 @@ function Product() {
 
 
     return (
-        <div id='product'>
+        <div id='product'>  
             {product && product.map((item) => (
-                <div className="probox">
-                    <ul key={item._id}>
-                        <div className="up">
-                            <li>{item.name}</li>
-                        </div>
-                        <div className="down">
-                            <li className='info'>{item.info}</li>
-                            <li> $ {item.price}</li>
-                        </div>
-                    </ul>
-                </div>
+                <ul className="probox" key={item._id}>
+                    <div className="up">
+                        <li>{item.name}</li>
+                    </div>
+                    <div className="down">
+                        <li className='info'>{item.info}</li>
+                        <li className='price'> $ {item.price}</li>
+                    </div>
+                </ul>
             ))}
         </div>
     )
