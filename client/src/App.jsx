@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import './App.scss'
 import MainLayout from './layout/mainLayout'
 import Add from './pages/add'
@@ -13,6 +14,9 @@ function App() {
 
   return (
     <>
+     <HelmetProvider>
+
+    
       <BrowserRouter>
         <Routes>
           <Route element={<MainLayout></MainLayout>} path='/'>
@@ -25,6 +29,8 @@ function App() {
 
         </Routes>
       </BrowserRouter>
+            
+     </HelmetProvider>
     </>
   )
 }
