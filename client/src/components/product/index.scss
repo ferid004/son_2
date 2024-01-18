@@ -1,36 +1,103 @@
 #product {
-    max-width: 1000px;
-    width: 100%;
-    margin: auto;
+    background-image: url('https://preview.colorlib.com/theme/pulse/img/slider/slider-3.jpg');
+    height: 140vh;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-
-    .probox {
+    .uptext {
+        margin-top: 30px;
+        width: 100%;
         display: flex;
-        width:45%;
-        gap: 10px;
-        display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        .up {
-            font-weight: 600;
-            font-size: 30px;
-        }
+        color: white;
 
-        .down {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-padding: 10px;
-            .info {
-                opacity: 70%;
-                font-size: 20px;
+        .icon {
+            font-size: 72px;
+
+            .fa-bowl-food:before {
+                color: white;
             }
-            .price{
-                font-size: 20px;
+        }
+        
+        .outtext {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;    
+            width: 100%;
+            font-size: 32px;
+            
+            .line {
+                height: 1px;
+                max-width: 200px;
+                width: 100%;
+                background-color: orange;
+            }
+        }
+        
+    }
+    .downtext{
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        color: white;
+        p{
+            &:hover{
+                color: orange;
+
+            }
+        }
+    }
+
+    .pp {
+        padding: 20px;
+        max-width: 1000px;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        color: white;
+
+        .probox {
+            display: flex;
+            margin-top: 30px;
+
+            width: 45%;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+
+            .up {
+                font-weight: 600;
+                font-size: 30px;
+            }
+
+            .down {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding: 10px;
+
+                .info {
+                    opacity: 70%;
+                    font-size: 20px;
+                }
+
+                .price {
+                    font-size: 20px;
+                }
             }
         }
     }
