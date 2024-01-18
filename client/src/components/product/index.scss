@@ -1,0 +1,26 @@
+#product {
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+display: flex;
+align-items: center;
+gap: 20px;
+
+    .probox {
+        width: 100%;
+
+        .up {
+            font-weight: 600;
+            font-size: 30px;
+        }
+
+        .down {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            .info {
+                opacity: 70%;
+            }
+        }
+    }
+}

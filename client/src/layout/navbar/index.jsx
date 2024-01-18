@@ -4,20 +4,20 @@ import { Link, NavLink } from 'react-router-dom'
 function Navbar() {
   return (
     <div id='navbar'>
-<div className="dev">
-  <div className="title">
-    <img src="" alt="" />
-  </div>
-  <div className="links">
-    <NavLink to={'/'}>HOME</NavLink>
-    <Link>about</Link>
-    <Link>contact</Link>
-    <NavLink to={'/add'}>ADD</NavLink>
-    <NavLink to={'/wish'}>WISH</NavLink>
-    <NavLink to={'/basket'}>BASKET</NavLink>
-    
-  </div>
-</div>
+      <div className="dev">
+        <div className="title">
+          <h2>Pulse</h2>
+        </div>
+        <div className="links">
+          <NavLink className={"link"} to={'/'}>HOME</NavLink>
+          <Link className={"link"} >about</Link>
+          <Link className={"link"} >contact</Link>
+          <NavLink className={"link"} to={'/add'}>ADD</NavLink>
+          <NavLink className={"link"} to={'/wish'}>WISH</NavLink>
+          <NavLink className={"link"} to={'/basket'}>BASKET</NavLink>
+
+        </div>
+      </div>
     </div>
   )
 }
