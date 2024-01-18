@@ -1,0 +1,40 @@
+.addpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    background-color: beige;
+    .forms{
+        .form{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+    }
+
+    .sortbut {
+        display: flex;
+        gap: 20px;
+
+    }
+    .tap{
+        table{
+            background-color:antiquewhite ;
+            th{
+                background-color:  rgb(240, 219, 192);
+            }
+            tr:nth-child(even){
+                background-color: rgb(240, 219, 192);
+            }
+            td{
+                padding: 10px;
+                text-align: center;
+            }
+        }
+    }
+}
